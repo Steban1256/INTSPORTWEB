@@ -1,0 +1,114 @@
+:root {
+    --theme-color: #111;
+    --text-color: #ffffff;
+    --primary-color: #555;
+}
+
+body {
+    font-family: 'Contrail One', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.content-container {
+    width: 50%;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    margin: 20px 0;
+    text-align: left;
+    color: #ffffff;
+}
+
+.content-container a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-bar {
+    background-color: #333;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+    font-weight: lighter;
+}
+
+.image-container {
+    position: relative;
+}
+
+.content-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.small-text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    opacity: .4;
+    padding: 3px 6px;
+    font-size: 8px;
+}
+
+.content-text {
+    padding: 15px;
+}
+
+.content-text p {
+    margin: 10px 0;
+}
+
+.content-text .small-text {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Estilos responsive */
+@media only screen and (max-width: 768px) {
+    .container-wrapper {
+        margin-top: 50px;
+    }
+
+    .content-container {
+        width: 90%; /* Ajustar el ancho de los contenedores en pantallas pequeñas */
+    }
+
+    .title-bar {
+        font-size: 16px; /* Reducir el tamaño del texto */
+    }
+
+    .small-text-overlay {
+        font-size: 7px; /* Reducir aún más el texto pequeño */
+    }
+
+    .content-text {
+        padding: 10px;
+    }
+
+    .content-text p {
+        margin: 8px 0; /* Reducir el espacio entre párrafos */
+    }
+
+    .content-text .small-text {
+        font-size: 10px; /* Texto más pequeño en dispositivos móviles */
+    }
+}

@@ -1,0 +1,268 @@
+:root {
+    --theme-color: #ffffff;
+    --text-color: #ffffff;
+    --primary-color: #555;
+}
+
+body {
+    font-family: 'Contrail One', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px); /* Ajusta el alto para tener en cuenta el menú */
+    margin-top: 60px; /* Espacio para el menú fijo */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    z-index: 1; /* Asegúrate de que el slider esté debajo del menú */
+}
+
+.slides {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+/* CSS original para .slides img */
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene las otras imágenes del slider recortadas */
+}
+
+
+/* Ajustes para el slider */
+.slide a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white; /* Cambia el color del texto a blanco */
+    text-decoration: none;
+}
+
+/* Estilos generales para los sliders */
+.caption {
+    font-size: 2vw; /* Ajuste de tamaño del texto en base al viewport */
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 350px;
+    color: #fff;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 16px; /* Tamaño de fuente ajustado para pantallas más pequeñas */
+        margin-top: 250px; /* Ajuste del margen superior para adaptarse mejor a pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .caption {
+        font-size: 14px; /* Tamaño de fuente ajustado para pantallas aún más pequeñas */
+        margin-top: 200px; /* Ajuste adicional del margen superior para pantallas muy pequeñas */
+    }
+}
+
+/* Ajustes generales */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50px; /* Espacio desde el borde izquierdo */
+    width: calc(100% - 120px); /* Ajusta el ancho para que no se sobreponga con los botones */
+    transform: translateY(-50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+
+.slide.active .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Transiciones para las banderas y las imágenes dentro de las banderas */
+.flag {
+    position: absolute;
+    top: 0;
+    left: 5vw; /* Ajuste relativo para hacer que sea responsive */
+    width: 10vw; /* Ajuste relativo para hacer que sea responsive */
+    height: 15vw; /* Ajuste relativo para hacer que sea responsive */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s, transform 1s;
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 2;
+}
+
+.flag img {
+    width: 80%; /* Ajuste relativo para mantener la proporción dentro de la bandera */
+    height: auto; /* Mantiene la proporción de la imagen */
+    box-shadow: none;
+    transition: opacity 1s, transform 1s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Cuando el slide está activo, aplica las transiciones */
+.slide.active .flag,
+.slide.active .flag img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media queries para ajustes adicionales en diferentes tamaños de pantalla */
+@media (min-width: 769px) {
+    .flag {
+        left: 90px; /* Ajuste para pantallas más grandes */
+        width: 90px; /* Ajuste para pantallas más grandes */
+        height: 130px; /* Ajuste para pantallas más grandes */
+    }
+
+    .flag img {
+        width: 70px; /* Ajuste para pantallas más grandes */
+        height: 70px; /* Ajuste para pantallas más grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .flag {
+        left: 10vw; /* Ajuste para pantallas más pequeñas */
+        width: 15vw; /* Ajuste para pantallas más pequeñas */
+        height: 20vw; /* Ajuste para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .flag {
+        left: 15vw; /* Ajuste para pantallas más pequeñas */
+        width: 20vw; /* Ajuste para pantallas más pequeñas */
+        height: 25vw; /* Ajuste para pantallas más pequeñas */
+    }
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.dot.active {
+    transform: scale(1.5);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #111;
+    margin-top: 40px;
+}
+
+/* Reducir tamaño de los contenedores */
+.content-container {
+    width: calc(30% - 20px);
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Para asegurar que el contenido esté en una columna */
+}
+
+.content-container img {
+    width: 100%;
+    height: 300px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta la imagen, recortando si es necesario */
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-container:hover img {
+    transform: scale(1.1); /* Efecto de aumento en la imagen */
+}
+
+.content-container h2 {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: lighter;
+    margin: 0; /* Elimina margen para asegurar el ajuste del texto */
+}
+
+/* Media query para dispositivos tipo tablet */
+@media (max-width: 1024px) {
+    .content-container {
+        width: calc(45% - 20px);
+    }
+}
+
+/* Media query para dispositivos tipo móvil */
+@media (max-width: 768px) {
+    .content-container {
+        width: 100%;
+        margin-bottom: 20px; /* Añadir margen inferior para separar los contenedores */
+    }
+}
+

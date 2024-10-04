@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG-ROOT/LOGO - BLANCO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>INTSPORTWEB</title>
+    <link rel="stylesheet" href="INICIO.CSS">
+    <link rel="stylesheet" href="menu - footer.css">
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="index.html" class="logo">
+                <img height="40" width="320" src="IMG-ROOT/INTSPORTWEB LETRA BLANCA.png" alt="INTSPORTWEB LETRA BLANCA">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-item">
+                    <a href="#" onclick="toggleSubmenu(event, 'menu-submenu')">Deportes</a>
+                    <ul id="menu-submenu" class="submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+            </ul>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Buscar..." name="search">
+                </form>
+            </div>
+        </nav>
+    </header>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <a href="SOBRE NOSOTROS.html">
+                        <img src="IMG-ROOT/INTSPORT INCO.png" alt="">
+                    </a>
+                </div>                           
+                <div class="slide">
+                    <div class="flag" style="background-color: #d4984c;">
+                        <img src="IMG-ROOT/ICONCICLISMO.png" alt="">
+                    </div>
+                    <a href="NOTICIASCICLISMO.HTML#ciclismo5">
+                        <img src="IMGNOTICIAS/ciclismo 5.png" alt="">
+                        <div class="content">
+                            <div class="caption" style="background-color: #00000080;">
+                                Tom Pidcock demostró su tenacidad y estrategia en la carrera de ciclismo de montaña.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <div class="flag" style="background-color: #2391a4;">
+                        <img src="IMG-ROOT/ICONBASQUETBOL.png" alt="">
+                    </div>
+                    <a href="NOTICIASBASQUETBOL.HTML#basquetbol8">
+                        <img src="IMGNOTICIAS/basquetbol 8.png" alt="">
+                      <div class="content">
+                        <div class="caption" style="background-color: #00000080;">
+                            Los Lakers Superan su Prueba Sin LeBron y Los Mavericks Aprovechan la Derrota de los Nuggets.
+                        </div>
+                      </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <div class="flag" style="background-color: rgb(194, 194, 194);">
+                        <img src="IMG-ROOT/ICONVOLEIBOL.png" alt="">
+                    </div>
+                <a href="NOTICIASVOLEIBOL.HTML#voleibol3">
+                        <img src="IMGNOTICIAS/voleibol 3.png" alt="">
+                    <div class="content">
+                        <div class="caption" style="background-color: #00000080;">
+                            París 2024 Presenta un Nuevo Desafío en el Voleibol Femenino Olímpico.
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="slide">
+                    <div class="flag" style="background-color: #2391a4;">
+                        <img src="IMG-ROOT/ICONFUTBOL.png" alt="">
+                    </div>
+                    <a href="NOTICIASFUTBOL.HTML#futbol8">
+                        <img src="IMGNOTICIAS/futbol 8.png" alt="">
+                     <div class="content">
+                        <div class="caption" style="background-color: #00000080;">
+                            Richard Ríos, la nueva joya colombiana que Europa desea.
+                        </div>
+                     </div>
+                    </a>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="prev" onclick="prevSlide(event)">&lt;</button>
+                <button class="next" onclick="nextSlide(event)">&gt;</button>
+            </div>
+            <div class="indicators">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+
+        <div class="container-wrapper">
+            <div class="content-container">
+                <a href="NOTICIASFUTBOL.HTML#futbol7">
+                    <img src="IMGNOTICIAS/futbol 7.png" alt="">
+                    <h2>Real Madrid presenta su nueva equipación naranja para la temporada 2024/2025</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASBASQUETBOL.HTML#basquetbol7">
+                    <img src="IMGNOTICIAS/basquetbol 7.png" alt="">
+                    <h2>A Correr con los Lakers: LeBron James Renueva y Continúa su Legado.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASFUTBOL.HTML#futbol6">
+                    <img src="IMGNOTICIAS/futbol 6.png" alt="">
+                    <h2>James Rodríguez se despide de Sao Paulo y busca nuevo rumbo.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASBASQUETBOL.HTML#basquetbol6">
+                    <img src="IMGNOTICIAS/basquetbol 6.png" alt="">
+                    <h2>Estados Unidos y su Dominio en el Baloncesto Mundial.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASVOLEIBOL.HTML#voleibol2">
+                    <img src="IMGNOTICIAS/voleibol 2.png" alt="">
+                    <h2>Cataluña Arrasa en el campeonato de España de Selecciones Autonómicas de Voleibol.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASCICLISMO.HTML#ciclismo4">
+                    <img src="IMGNOTICIAS/ciclismo 4.png" alt="">
+                    <h2>¡La Coronación del Rey! Pogačar Consigue su Tercer Título del Tour de Francia.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASFUTBOL.HTML#futbol5">
+                    <img src="IMGNOTICIAS/futbol 5.png" alt="">
+                    <h2>FFF denuncia a Argentina ante FIFA por incidente de discriminación en celebraciones de Copa América.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASBASQUETBOL.HTML#basquetbol5">
+                    <img src="IMGNOTICIAS/basquetbol 5.png" alt="">
+                    <h2>Aldama Brilla en la Victoria sobre Grecia y Asegura el Camino a los Cuartos.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASVOLEIBOL.HTML#voleibol1">
+                    <img src="IMGNOTICIAS/voleibol 1.png" alt="">
+                    <h2>VOLEIBOL EN PARÍS 2024: LAS SELECCIONES PODRÁN CONVOCAR UN JUGADOR 13º DE RESERVA.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASCICLISMO.HTML#ciclismo3">
+                    <img src="IMGNOTICIAS/ciclismo 3.png" alt="">
+                    <h2>LeBron James se Asocia con Canyon Bicycles para Inspirar a Nuevos Ciclistas.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASFUTBOL.HTML#futbol4">
+                    <img src="IMGNOTICIAS/futbol 4.png" alt="">
+                    <h2>Colombia brilla en la Copa América y sube en el ranking FIFA.</h2>
+                </a>
+            </div>
+            <div class="content-container">
+                <a href="NOTICIASBASQUETBOL.HTML#basquetbol4">
+                    <img src="IMGNOTICIAS/basquetbol 4.png" alt="">
+                    <h2>España se Impone a Grecia en el Torneo Olímpico.</h2>
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>© 2024 INTSPORTWEB. Todos los derechos reservados.</p>
+                <ul class="footer-menu">
+                    <li><a href="INICIO.html">Inicio</a></li>
+                    <li class="submenu-container">
+                        <a href="" class="footer-menu-item" onclick="toggleFooterSubmenu(event)">Deportes</a>
+                        <ul class="footer-submenu">
+                            <li><a href="FUTBOL.HTML">Futbol</a></li>
+                            <li><a href="BASQUETBOL.HTML">Basquetbol</a></li>
+                            <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                            <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+                </ul>
+            </div>
+        </footer>
+        
+        <script src="INTSPORTWEB.JS"></script>
+        <script src="buscador.js"></script>
+</body>
+</html>

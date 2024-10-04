@@ -1,0 +1,347 @@
+.topnav {
+    font-family: 'Contrail One', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    background-color: #000;
+    color: var(--text-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    position: relative;
+    padding: 0 10px;
+}
+
+.menu a {
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    padding: 0;
+    list-style: none;
+}
+
+.submenu li {
+    width: 140px;
+}
+
+.submenu a {
+    padding: 10px;
+    display: block;
+    color: white;
+}
+
+.submenu a:hover {
+    background-color: var(--primary-color);
+}
+
+.submenu.show {
+    display: block;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 6px;
+    margin-right: 50px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 1224px) {
+    .logo {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+/* Estilos para el menú hamburguesa en dispositivos móviles */
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajusta según el alto del menú */
+    left: 0;
+    width: 250px;
+    background-color: #000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 20; /* Asegúrate de que el menú esté por encima del contenido */
+}
+
+.menu.active {
+    display: flex;
+}
+
+/* Estilo para los elementos del menú */
+.menu li {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.menu a {
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Asegura que el área de clic cubra el área del elemento */
+}
+
+/* Efecto de iluminación al pasar el cursor sobre un botón del menú */
+.menu a:hover, .menu a:focus {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Estilos para el submenú */
+.submenu {
+    display: none;
+    position: static;
+    background-color: #000;
+    padding: 0;
+    list-style: none;
+}
+
+.submenu.show {
+    display: block;
+}
+
+.submenu a {
+    padding: 10px 20px;
+}
+
+.submenu a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Ajustes para el contenedor de búsqueda en móviles */
+.search-container {
+    display: block;
+    width: auto;
+    margin: 10px;
+}
+
+.search-container input[type="text"] {
+    width: calc(100% - 40px);
+    margin: 0;
+}
+
+}
+/* Diseño general del footer */
+footer {
+    font-family: 'Contrail One', sans-serif;
+    background-color: #000;
+    color: var(--text-color);
+    padding: 14.5px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 250px; /* Altura fija para computadoras */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para el footer */
+    box-sizing: border-box;
+}
+
+/* Estilo para el texto de derechos de autor */
+.footer-content > p {
+    font-size: 24px;
+    margin-right: 150px;
+    white-space: nowrap;
+}
+
+.footer-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-menu li {
+    position: relative;
+    padding: 0 15px;
+}
+
+.footer-menu a {
+    color: var(--text-color);
+    font-size: 24px;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+}
+
+.footer-menu a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Submenús */
+.footer-submenu {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: #000;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-submenu li {
+    width: 140px;
+}
+
+.footer-submenu a {
+    padding: 12px;
+    display: block;
+    color: white;
+}
+
+.footer-submenu a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Media queries para pantallas más grandes que una tablet y más pequeñas que una computadora (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1124px) {
+    footer {
+        flex-direction: column; /* Cambia a disposición en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center;
+        padding: 10px;
+        height: auto; /* Ajusta la altura del footer */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Dirección en columna */
+        align-items: center;
+        width: 100%;
+        max-width: none; /* Elimina el límite de ancho */
+        box-sizing: border-box;
+    }
+
+    .footer-content > p {
+        font-size: 18px; /* Texto más pequeño */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 20px; /* Agrega espacio debajo del texto */
+    }
+
+    .footer-menu {
+        flex-direction: column; /* Columnar en pantallas medianas */
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-menu li {
+        padding: 10px 0; /* Padding vertical */
+    }
+
+    .footer-menu a {
+        font-size: 18px; /* Reduce el tamaño de los enlaces */
+        padding: 10px 15px; /* Padding reducido */
+    }
+}
+
+/* Diseño responsive para pantallas más pequeñas (tablets y celulares) */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        height: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .footer-content > p {
+        font-size: 18px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-menu li {
+        padding: 10px 0;
+    }
+}

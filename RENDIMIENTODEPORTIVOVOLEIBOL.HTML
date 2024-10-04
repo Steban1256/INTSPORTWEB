@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RDVOLEIBOL.CSS">
+    <link rel="stylesheet" href="menu - footer.css">
+    <link rel="icon" href="IMG-ROOT/LOGO - BLANCO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>RENDIMIENTO DEPORTIVO</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="index.html" class="logo">
+                <img height="40" width="320" src="IMG-ROOT/INTSPORTWEB LETRA BLANCA.png" alt="INTSPORTWEB LETRA BLANCA">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-item">
+                    <a href="#" onclick="toggleSubmenu(event, 'menu-submenu')">Deportes</a>
+                    <ul id="menu-submenu" class="submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+                <li><a href="RENDIMIENTODEPORTIVOVOLEIBOL.HTML">Rendimiento deportivo</a></li>
+            </ul>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Buscar..." name="search">
+                </form>
+            </div>
+        </nav>
+        <nav>
+            <ul class="sub">
+                <button onclick="showTab('inicio')">Inicio</button>
+                <button onclick="showTab('jugadoras')">Jugadoras</button>
+                <button onclick="showTab('calendario')">Calendario</button>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div id="inicio">
+            <h2>Análisis de la Selección Colombia de Voleibol Femenino</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">Último Partido</div>
+                    <div class="card-content">
+                        <h3>Colombia 3 - 1 Venezuela</h3>
+                        <p>Fecha: 15 de agosto de 2023</p>
+                        <p>Juegos Panamericanos 2023</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Próximo Partido</div>
+                    <div class="card-content">
+                        <h3>Colombia vs Brasil</h3>
+                        <p>Fecha: 20 de junio de 2024</p>
+                        <p>Clasificatorias Olímpicas Sudamericanas</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Jugadora Destacada</div>
+                    <div class="card-content">
+                        <h3>Amanda Coneo</h3>
+                        <img src="/api/placeholder/200/200" alt="Amanda Coneo" style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto; display: block;">
+                        <p>Puntos: 234</p>
+                        <p>Eficacia: 45%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="alert">
+                <div class="alert-title">Análisis del Equipo</div>
+                <p>La Selección Colombia de Voleibol Femenino ha mostrado un notable progreso en los últimos años. Su reciente victoria contra Venezuela en los Juegos Panamericanos 2023 demuestra su creciente competitividad a nivel continental. Con una efectividad de ataque del 58% y un sólido juego defensivo, el equipo está bien posicionado para los próximos desafíos. El liderazgo de Amanda Coneo en la cancha ha sido fundamental para elevar el nivel del equipo.</p>
+            </div>
+        </div>
+
+        <div id="jugadoras" style="display: none;">
+            <h2>Equipo Principal</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Posición</th>
+                        <th>Altura</th>
+                        <th>Club Actual</th>
+                    </tr>
+                </thead>
+                <tbody id="playerTableBody"></tbody>
+            </table>
+        </div>
+
+        <div id="estadisticas" style="display: none;">
+            <h2>Estadísticas del Equipo</h2>
+            <canvas id="statsChart"></canvas>
+        </div>
+
+        <div id="calendario" style="display: none;">
+            <h2>Próximos Partidos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Rival</th>
+                        <th>Competición</th>
+                        <th>Sede</th>
+                    </tr>
+                </thead>
+                <tbody id="matchTableBody"></tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="foot">
+        <div class="footer-content">
+            <p>© 2024 INTSPORTWEB. Todos los derechos reservados.</p>
+            <ul class="footer-menu">
+                <li><a href="INICIO.html">Inicio</a></li>
+                <li class="submenu-container">
+                    <a href="" class="footer-menu-item" onclick="toggleFooterSubmenu(event)">Deportes</a>
+                    <ul class="footer-submenu">
+                        <li><a href="FUTBOL.HTML">Futbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Basquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="INTSPORTWEB.JS"></script>
+    <script src="buscador.js"></script>
+    <script src="RENDIMIENTOv.js"></script>
+</body>
+</html>

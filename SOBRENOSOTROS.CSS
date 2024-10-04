@@ -1,0 +1,171 @@
+/* Estilos generales */
+:root {
+    --theme-color: #ffffff;
+    --text-color: #ffffff;
+    --primary-color: #555;
+}
+
+body {
+    font-family: 'Contrail One', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.image-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; /* Ajustar margen según la altura del menú */
+}
+
+.image-banner img {
+    width: 35%;
+    height: auto;
+}
+
+.acerca {
+    color: #000;
+    text-align: center; /* Centrar el texto horizontalmente */
+}
+
+.acerca p {
+    width: 40%;
+    margin: 0 auto; /* Centrar el texto horizontalmente */
+    padding: 0 10px; /* Agregar padding para mejorar la legibilidad */
+}
+
+.lineas {
+    display: flex;
+    justify-content: center; /* Centrar los contenedores horizontalmente */
+    flex-wrap: wrap; /* Permitir que los contenedores se envuelvan en pantallas pequeñas */
+    margin: 20px auto;
+    width: 90%; /* Ajusta el ancho del contenedor */
+}
+
+.lineaizquierda, .lineaderecha {
+    width: 40%; /* Ajustar el ancho de cada contenedor para que se acomoden en pantallas pequeñas */
+    background-color: #faf9f9;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #000;
+    text-align: center;
+    margin: 10px; /* Espacio entre los contenedores */
+}
+
+.lineaizquierda::before, .lineaderecha::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el contenedor de comentarios */
+.comentarios {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    width: 40%; /* Ajusta el ancho del contenedor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.comentarios h1 {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.comentarios p {
+    color: #000;
+    margin-bottom: 15px;
+    width: 100%; /* Ajusta el ancho del texto */
+    margin: 0 auto; /* Centrar el texto */
+    padding: 0 10px; /* Agregar padding para mejorar la legibilidad */
+}
+
+.comentarios::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 10px;
+}
+
+.comentarios button {
+    background-color: #555;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem; /* Ajustar tamaño del texto del botón */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+.comentarios button:hover {
+    background-color: #333;
+}
+.boton {
+    color: #fff;
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    /* Logo más pequeño en pantallas pequeñas */
+    .topnav .logo img {
+        width: 80%; /* Reducido al 80% del ancho */
+        height: auto;
+    }
+    
+    /* Imagen del banner más pequeña */
+    .image-banner img {
+        width: 80%; /* Reducido al 80% del ancho */
+        height: auto;
+    }
+
+    /* Los contenedores uno debajo del otro ocupando toda la pantalla */
+    .lineas {
+        display: block;
+        width: 100%;
+    }
+
+    .lineaizquierda, .lineaderecha {
+        width: 90%; /* Reducir el ancho de los contenedores */
+        margin-bottom: 10px; /* Espacio más pequeño entre los contenedores */
+        padding: 10px; /* Reducir el padding de los contenedores */
+    }
+
+    /* Reducir el tamaño de la fuente en la sección "Acerca de nosotros" */
+    .acerca h1 {
+        font-size: 1.5rem; /* Tamaño más pequeño para el título */
+    }
+
+    .acerca p {
+        width: 90%;
+        padding: 0 10px; /* Reducir el padding lateral */
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
+    }
+
+    /* Reducir el tamaño de los títulos y textos de los contenedores */
+    .lineaizquierda h1, .lineaderecha h1 {
+        font-size: 1.4rem; /* Tamaño más pequeño para los títulos */
+    }
+
+    .lineaizquierda p, .lineaderecha p {
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
+    }
+
+    .comentarios {
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+        padding: 15px; /* Reducir el padding del contenedor */
+    }
+}

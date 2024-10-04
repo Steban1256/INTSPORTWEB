@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RDCICLSMO.CSS">
+    <link rel="stylesheet" href="menu - footer.css">
+    <link rel="icon" href="IMG-ROOT/LOGO - BLANCO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>RENDIMIENTO DEPORTIVO</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="index.html" class="logo">
+                <img height="40" width="320" src="IMG-ROOT/INTSPORTWEB LETRA BLANCA.png" alt="INTSPORTWEB LETRA BLANCA">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-item">
+                    <a href="#" onclick="toggleSubmenu(event, 'menu-submenu')">Deportes</a>
+                    <ul id="menu-submenu" class="submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+                <li><a href="RENDIMIENTODEPORTIVOCICLISMO.HTML">Rendimiento deportivo</a></li>
+            </ul>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Buscar..." name="search">
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="etapa">
+            <h2>Última Etapa: Tour de Francia 2024</h2>
+            <p>Fecha: 21 de julio de 2024</p>
+            <div class="resultados">
+                <div class="ciclista" style="border-left: 5px solid gold;">
+                    <h3>Tadej Pogačar</h3>
+                    <p>Posición: <span id="posicionPogacar">1</span></p>
+                    <p>Tiempo: 5h 42m 30s</p>
+                    <p>Diferencia: +0:00</p>
+                </div>
+                <div class="ciclista" style="border-left: 5px solid silver;">
+                    <h3>Jonas Vingegaard</h3>
+                    <p>Posición: <span id="posicionVingegaard">2</span></p>
+                    <p>Tiempo: 5h 42m 45s</p>
+                    <p>Diferencia: +0:15</p>
+                </div>
+                <div class="ciclista" style="border-left: 5px solid #CD7F32;">
+                    <h3>Primož Roglič</h3>
+                    <p>Posición: <span id="posicionRoglic">3</span></p>
+                    <p>Tiempo: 5h 43m 10s</p>
+                    <p>Diferencia: +0:40</p>
+                </div>
+                <div class="ciclista" style="border-left: 5px solid #1E90FF;">
+                    <h3>Egan Bernal</h3>
+                    <p>Posición: <span id="posicionBernal">4</span></p>
+                    <p>Tiempo: 5h 43m 30s</p>
+                    <p>Diferencia: +1:00</p>
+                </div>
+            </div>
+        </section>
+        <section id="analisis">
+            <h2>Análisis de la Etapa</h2>
+            <p id="analisisEtapa">La etapa final del Tour de Francia 2024 fue un espectáculo de ciclismo de élite. Tadej Pogačar demostró su dominio al atacar en los Campos Elíseos, asegurando tanto la victoria de etapa como el maillot amarillo. Jonas Vingegaard y Primož Roglič completaron el podio tras una intensa batalla. Egan Bernal, aunque no pudo alcanzar el podio, mostró una gran recuperación y promete para futuras ediciones.</p>
+            <button onclick="cambiarAnalisis()">Actualizar Análisis</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 INTSPORTWEB. Todos los derechos reservados.</p>
+            <ul class="footer-menu">
+                <li><a href="INICIO.html">Inicio</a></li>
+                <li class="submenu-container">
+                    <a href="" class="footer-menu-item" onclick="toggleFooterSubmenu(event)">Deportes</a>
+                    <ul class="footer-submenu">
+                        <li><a href="FUTBOL.HTML">Futbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Basquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="INTSPORTWEB.JS"></script>
+    <script src="buscador.js"></script>
+    <script src="RENDIMIENTOC.js"></script>
+</body>
+</html>

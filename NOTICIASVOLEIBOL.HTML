@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NOTICIASDEPORTES.CSS">
+    <link rel="stylesheet" href="menu - footer.css">
+    <link rel="icon" href="IMG-ROOT/LOGO - BLANCO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>NOTICIAS VOLEIBOL</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="index.html" class="logo">
+                <img height="40" width="320" src="IMG-ROOT/INTSPORTWEB LETRA BLANCA.png" alt="INTSPORTWEB LETRA BLANCA">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-item">
+                    <a href="#" onclick="toggleSubmenu(event, 'menu-submenu')">Deportes</a>
+                    <ul id="menu-submenu" class="submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+                <li><a href="RENDIMIENTODEPORTIVOVOLEIBOL.HTML">Rendimiento deportivo</a></li>
+            </ul>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Buscar..." name="search">
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="container-wrapper">
+        <div id="voleibol3" class="content-container">
+            <a>
+                <div class="title-bar">París 2024 Presenta un Nuevo Desafío en el Voleibol Femenino Olímpico.</div>
+                <div class="image-container">
+                    <img src="IMGNOTICIAS/voleibol 3.png" alt="">
+                    <a href="https://lc.cx/4q2U62" target="_blank">
+                        <div class="small-text-overlay">https://lc.cx/4q2U62</div>
+                    </a>
+                </div>
+                <div class="content-text">
+                    <p>En los últimos tres Juegos Olímpicos de voleibol femenino, tres equipos distintos se coronaron campeones y cinco diferentes subieron al podio. En París 2024, se implementará un nuevo formato que incluye tres partidos en la fase de grupos antes de los cuartos de final. Este cambio pretende aumentar la emoción y la competitividad con menos partidos pero con más en juego. Los equipos participantes en esta edición incluyen a Francia, Estados Unidos, China, Serbia, Brasil, Polonia, Japón, Kenia, Italia, Turquía, Países Bajos y República Dominicana.</p>
+                    <p class="small-text">22 de Julio de 2024</p>
+                </div>
+            </a>
+        </div>
+        <div id="voleibol2" class="content-container">
+            <a>
+                <div class="title-bar">Cataluña Arrasa en el Campeonato de España de Selecciones Autonómicas de Voleibol.</div>
+                <div class="image-container">
+                    <img src="IMGNOTICIAS/voleibol 2.png" alt="">
+                    <a href="https://lc.cx/9-9lKs" target="_blank">
+                        <div class="small-text-overlay">https://lc.cx/9-9lKs</div>
+                    </a>
+                </div>
+                <div class="content-text">
+                    <p>En el Campeonato de España de Selecciones Autonómicas (CESA) en categorias infantil y cadete, celebrado en Valladolid, Cataluña ha hecho historia al alcanzar las cuatro finales del torneo. Esta hazaña nunca antes lograda por ninguna otra comunidad autónoma se tradujo en un dominio absoluto, con Cataluña llevándose a casa tres medallas de oro y una de plata.</p>
+                    <p class="small-text">2 de Julio de 2024</p>
+                </div>
+            </a>
+        </div>
+        <div id="voleibol1" class="content-container">
+            <a>
+                <div class="title-bar">VOLEIBOL EN PARÍS 2024: LAS SELECCIONES PODRÁN CONVOCAR UN JUGADOR 13º DE RESERVA.</div>
+                <div class="image-container">
+                    <img src="IMGNOTICIAS/voleibol 1.png" alt="">
+                    <a href="https://lc.cx/40ujAU" target="_blank">
+                        <div class="small-text-overlay" style="color: black;">https://lc.cx/40ujAU</div>
+                    </a>
+                </div>
+                <div class="content-text">
+                    <p>En los Juegos Olímpicos de París 2024, la Federación Internacional de Voleibol (FIVB) ha anunciado que cada equipo podrá convocar a un jugador número 13 como reserva. Este jugador podrá sustituir a otro de la nómina principal en caso de lesión o enfermedad. Sin embargo, una vez activado, el jugador sustituido no podrá regresar al torneo. El jugador de reserva podrá asistir a los partidos y entrenar con el equipo, pero no será alojado en la Villa Olímpica a menos que el Comité Olímpico Nacional le brinde apoyo adicional.</p>
+                    <p class="small-text">11 de Enero de 2024</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 INTSPORTWEB. Todos los derechos reservados.</p>
+            <ul class="footer-menu">
+                <li><a href="INICIO.html">Inicio</a></li>
+                <li class="submenu-container">
+                    <a href="" class="footer-menu-item" onclick="toggleFooterSubmenu(event)">Deportes</a>
+                    <ul class="footer-submenu">
+                        <li><a href="FUTBOL.HTML">Futbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Basquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="INTSPORTWEB.JS"></script>
+    <script src="buscador.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RDBASQUETBOL.CSS">
+    <link rel="stylesheet" href="menu - footer.css">
+    <link rel="icon" href="IMG-ROOT/LOGO-BLANCO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>RENDIMIENTO DEPORTIVO</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="index.html" class="logo">
+                <img height="40" width="320" src="IMG-ROOT/INTSPORTWEB LETRA BLANCA.png" alt="INTSPORTWEB LETRA BLANCA">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-item">
+                    <a href="#" onclick="toggleSubmenu(event, 'menu-submenu')">Deportes</a>
+                    <ul id="menu-submenu" class="submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+                <li><a href="RENDIMIENTODEPORTIVOBASQUETBOL.HTML">Rendimiento deportivo</a></li>
+            </ul>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Buscar..." name="search">
+                </form>
+            </div>
+        </nav>
+        <nav>
+            <ul class="sub">
+                <li><a href="#inicio" class="nav-link" data-section="inicio">Inicio</a></li>
+                <li><a href="#jugadores" class="nav-link" data-section="jugadores">Jugadores</a></li>
+                <li><a href="#estadisticas" class="nav-link" data-section="estadisticas">Estadísticas</a></li>
+                <li><a href="#calendario" class="nav-link" data-section="calendario">Calendario</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="inicio" class="section active">
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-header">Último Partido</div>
+                        <div class="card-body">
+                            <p>Golden State Warriors 120 - 114 Los Angeles Lakers</p>
+                            <p>Fecha: 12 de septiembre de 2024</p>
+                            <p>Temporada Regular NBA</p>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">234</div>
+                                    <div class="stat-label">Puntos Totales</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">25</div>
+                                    <div class="stat-label">Triples</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">87</div>
+                                    <div class="stat-label">Rebotes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">Próximo Partido</div>
+                        <div class="card-body">
+                            <p>Boston Celtics vs Brooklyn Nets</p>
+                            <p>Fecha: 15 de septiembre de 2024</p>
+                            <p>Temporada Regular NBA</p>
+                            <button class="btn" id="detalles-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">Jugador Destacado</div>
+                        <div class="card-body">
+                            <h3>Stephen Curry</h3>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <div class="stat-value" id="ppg">28.5</div>
+                                    <div class="stat-label">PPG</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="apg">6.2</div>
+                                    <div class="stat-label">APG</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="rpg">5.3</div>
+                                    <div class="stat-label">RPG</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="jugadores" class="section">
+                <h2>Jugadores Destacados</h2>
+                <div class="grid-container" id="jugadores-container">
+                    <!-- Los jugadores se cargarán dinámicamente aquí -->
+                </div>
+            </section>
+    
+            <section id="estadisticas" class="section">
+                <h2>Estadísticas de la Liga</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="estadisticas-body">
+                        <!-- Las estadísticas se cargarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </section>
+    
+            <section id="calendario" class="section">
+                <h2>Próximos Partidos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipos</th>
+                            <th>Hora (ET)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendario-body">
+                        <!-- Los partidos se cargarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        
+    <footer class="foot">
+        <div class="footer-content">
+            <p>© 2024 INTSPORTWEB. Todos los derechos reservados.</p>
+            <ul class="footer-menu">
+                <li><a href="INICIO.html">Inicio</a></li>
+                <li class="submenu-container">
+                    <a href="#" class="footer-menu-item" onclick="toggleFooterSubmenu(event)">Deportes</a>
+                    <ul class="footer-submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="INTSPORTWEB.JS"></script>
+    <script src="buscador.js"></script>
+    <script src="RENDIMIENTOB.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SOBRENOSOTROS.CSS">
+    <link rel="stylesheet" href="menu - footer.css">
+    <link rel="icon" href="IMG-ROOT/LOGO - BLANCO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>SOBRE NOSOTROS</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="index.html" class="logo">
+                <img height="40" width="320" src="IMG-ROOT/INTSPORTWEB LETRA BLANCA.png" alt="INTSPORTWEB LETRA BLANCA">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-item">
+                    <a href="#" onclick="toggleSubmenu(event, 'menu-submenu')">Deportes</a>
+                    <ul id="menu-submenu" class="submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+            </ul>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Buscar..." name="search">
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="image-banner">
+        <img src="IMG-ROOT/SOBRE NOSOTROS INT.png" alt="">
+    </div>
+    
+    <center>
+        <div id="acerca" class="acerca">
+            <h1>Acerca de nosotros</h1>
+            <p>Nuestra idea de negocio ofrece noticias y un análisis de rendimiento a los equipos deportivos. Buscamos incentivar el consumo de contenido deportivo, a través de nuestra página web, con el fin de promover información certera de lo que ocurre en la actualidad.</p>
+        </div>
+    </center>
+
+    <div class="lineas">
+        <div id="mision" class="lineaizquierda">
+            <h1>Misión</h1>
+            <p>Nuestra misión es desarrollar el acceso a noticias y a estadísticas sobre los equipos de los deportes relevantes, tales como el fútbol, basquetbol, voleibol y el ciclismo, ofreciendo un diseño innovador y fácil de usar que ofrece un formato datos precisos y actualizados sobre el desempeño de los equipos en los deportes mencionados. Nos comprometemos a proporcionar noticias actualizadas y un buen análisis de rendimiento deportivo.</p>
+        </div>
+        <div id="vision" class="lineaderecha">
+            <h1>Visión</h1>
+            <p>Nuestra visión es ser reconocidos como la principal fuente de noticias, trabajo y esfuerzo en estadísticas de equipos a nivel nacional, destacando por nuestra excelencia en la recopilación, presentación y análisis de datos deportivos. Queremos ser la plataforma preferida tanto para aficionados como para profesionales del deporte, además, mantenerlos informados y mejorar su experiencia en los deportes con nuestra tecnología.</p>
+        </div>
+    </div>
+
+    <div class="comentarios">
+        <h1>¡Queremos leerte!</h1>
+        <p>Tu opinión es muy valiosa para nosotros. Ya sea que tengas una sugerencia, una experiencia que compartir, o simplemente quieras decirnos qué te parece lo que hacemos, estamos aquí para leerte. ¡Haz clic en el botón de abajo y deja tu comentario! Nos encantaría saber qué piensas y cómo podemos seguir mejorando para ti.</p>
+        <button>
+            <a href="http://surl.li/ktabmz" target="_blank">
+                <div class="boton">Deja tu comentario</div>
+            </a>
+        </button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 INTSPORTWEB. Todos los derechos reservados.</p>
+            <ul class="footer-menu">
+                <li><a href="INICIO.html">Inicio</a></li>
+                <li class="submenu-container">
+                    <a href="" class="footer-menu-item" onclick="toggleFooterSubmenu(event)">Deportes</a>
+                    <ul class="footer-submenu">
+                        <li><a href="FUTBOL.HTML">Futbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Basquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="INTSPORTWEB.JS"></script>
+    <script src="buscador.js"></script>
+</body>
+</html>

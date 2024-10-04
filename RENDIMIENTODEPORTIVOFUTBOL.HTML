@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RDFUTBOL.CSS">
+    <link rel="stylesheet" href="menu - footer.css">
+    <link rel="icon" href="IMG-ROOT/LOGO - BLANCO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>RENDIMIENTO DEPORTIVO</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="index.html" class="logo">
+                <img height="40" width="320" src="IMG-ROOT/INTSPORTWEB LETRA BLANCA.png" alt="INTSPORTWEB LETRA BLANCA">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="menu-item">
+                    <a href="#" onclick="toggleSubmenu(event, 'menu-submenu')">Deportes</a>
+                    <ul id="menu-submenu" class="submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+                <li><a href="RENDIMIENTODEPORTIVOFUTBOL.HTML">Rendimiento deportivo</a></li>
+            </ul>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Buscar..." name="search">
+                </form>
+            </div>
+        </nav>
+        <nav>
+            <ul class="sub">
+                <li><a href="#inicio" class="nav-link" data-section="inicio">Inicio</a></li>
+                <li><a href="#jugadores" class="nav-link" data-section="jugadores">Jugadores</a></li>
+                <li><a href="#estadisticas" class="nav-link" data-section="estadisticas">Estadísticas</a></li>
+                <li><a href="#calendario" class="nav-link" data-section="calendario">Calendario</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="inicio" class="section active">
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-header">Último Partido</div>
+                        <div class="card-body">
+                            <p>Colombia 2 - 1 Brasil</p>
+                            <p>Fecha: 12 de septiembre de 2024</p>
+                            <p>Eliminatorias Mundial 2026</p>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <div class="stat-value" id="posesion">65%</div>
+                                    <div class="stat-label">Posesión</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="tiros">15</div>
+                                    <div class="stat-label">Tiros</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="corners">7</div>
+                                    <div class="stat-label">Corners</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">Próximo Partido</div>
+                        <div class="card-body">
+                            <p>Colombia vs Argentina</p>
+                            <p>Fecha: 20 de septiembre de 2024</p>
+                            <p>Eliminatorias Mundial 2026</p>
+                            <button class="btn" id="detalles-btn">Ver detalles</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">Goleador</div>
+                        <div class="card-body">
+                            <h3>Luis Díaz</h3>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <div class="stat-value" id="goles">7</div>
+                                    <div class="stat-label">Goles</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="asistencias">4</div>
+                                    <div class="stat-label">Asistencias</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="jugadores" class="section">
+                <h2>Jugadores Destacados</h2>
+                <div class="grid-container" id="jugadores-container">
+                    <!-- Los jugadores se cargarán dinámicamente aquí -->
+                </div>
+            </section>
+    
+            <section id="estadisticas" class="section">
+                <h2>Estadísticas del Equipo</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="estadisticas-body">
+                        <!-- Las estadísticas se cargarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </section>
+    
+            <section id="calendario" class="section">
+                <h2>Próximos Partidos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Rival</th>
+                            <th>Competición</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendario-body">
+                        <!-- Los partidos se cargarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    <div class="container">
+        <header class="colombia">
+            <h1>Desempeño de Colombia en la Copa América 2024</h1>
+        </header>
+        <section>
+            <h2 style="color: black;">Resultados de los Partidos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Partido</th>
+                        <th>MVP</th>
+                        <th>Resultado</th>
+                        <th>Lugar</th>
+                        <th>Tarjetas Amarillas</th>
+                        <th>Tarjetas Rojas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Colombia vs. Uruguay</td>
+                        <td>James Rodriguez</td>
+                        <td>1-0</td>
+                        <td>Bank of America Stadium</td>
+                        <td>6</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2. Colombia vs. Argentina</td>
+                        <td>James Rodríguez </td>
+                        <td>0-1</td>
+                        <td>Hard Rock Stadium</td>
+                        <td>4</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3. Colombia vs. Brasil</td>
+                        <td>James Rodríguez </td>
+                        <td>1-1</td>
+                        <td>Levi's Stadium</td>
+                        <td>5</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section style="color: black;"> 
+            <h2 style="color: black;"> Análisis del Desempeño</h2>
+            <div class="content" >
+                <p><strong>Puntos Totales:</strong> 4 puntos en 3 partidos (1 victoria, 1 empate, 1 derrota). Colombia no avanzó a la siguiente fase debido a la falta de puntos.</p>
+                <p><strong>Tarjetas:</strong></p>
+                <ul>
+                    <li><strong>Tarjetas Amarillas:</strong> 4 - Refleja problemas en la disciplina y el control del juego.</li>
+                    <li><strong>Tarjetas Rojas:</strong> 0 - No se cometieron infracciones graves.</li>
+                </ul>
+                <p><strong>Observaciones:</strong> El equipo tuvo dificultades para mantener la consistencia y asegurar victorias clave. La gestión de tarjetas y la conversión de oportunidades en goles serán áreas a mejorar.</p>
+                <p><strong>Siguientes Pasos:</strong> Evaluar tácticas, mejorar la consistencia en el rendimiento y gestionar mejor las tarjetas para futuras competiciones.</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 INTSPORTWEB. Todos los derechos reservados.</p>
+            <ul class="footer-menu">
+                <li><a href="INICIO.html">Inicio</a></li>
+                <li class="submenu-container">
+                    <a href="#" class="footer-menu-item" onclick="toggleFooterSubmenu(event)">Deportes</a>
+                    <ul class="footer-submenu">
+                        <li><a href="FUTBOL.HTML">Fútbol</a></li>
+                        <li><a href="BASQUETBOL.HTML">Básquetbol</a></li>
+                        <li><a href="VOLEIBOL.HTML">Voleibol</a></li>
+                        <li><a href="CICLISMO.HTML">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li><a href="SOBRE NOSOTROS.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="INTSPORTWEB.JS"></script>
+    <script src="buscador.js"></script>
+    <script src="RENDIMIENTOF.js"></script>
+</body>
+</html>

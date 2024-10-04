@@ -1,0 +1,214 @@
+:root {
+    --theme-color: #ffffff;
+    --text-color: #ffffff;
+    --primary-color: #555;
+}
+
+body {
+    font-family: 'Contrail One', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    background-color: #111;
+}
+
+.content-container {
+    width: 55%;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    margin: 10px 0;
+    text-align: left;
+    margin-top: 42px;
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Transición de aumento al pasar el puntero del mouse */
+.content-container:hover {
+    transform: scale(1.05);
+}
+
+.content-container img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-container:hover img {
+    transform: scale(1.1);
+}
+
+.content-container h2 {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    image-rendering: auto;
+}
+
+.slide a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    width: calc(100% - 120px);
+    transform: translateY(-50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.caption {
+    font-size: 1.5vw; /* Tamaño de texto más pequeño */
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 350px;
+    color: #fff;
+}
+
+.slide.active .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.dot.active {
+    transform: scale(1.5);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Estilos responsive */
+@media only screen and (max-width: 768px) {
+    /* Slider: Contenedores ajustados */
+    .slider {
+        height: 100vh; /* Ocupa toda la pantalla en dispositivos pequeños */
+    }
+
+    .content {
+        top: 60%;
+        left: 50%;
+        width: 90%; /* Ajustar el ancho */
+        transform: translate(-50%, -60%);
+        padding: 20px;
+        text-align: center; /* Centrar el texto */
+    }
+
+    .caption {
+        font-size: 4vw; /* Texto más pequeño para pantallas móviles */
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    /* Botones de navegación */
+    .prev, .next {
+        padding: 20px; /* Tamaño adecuado para pantallas pequeñas */
+    }
+
+    .content-container {
+        width: 90%; /* Aumentar el tamaño de los contenedores en dispositivos móviles */
+        margin: 20px auto;
+    }
+
+    .content-container h2 {
+        font-size: 1.1em; /* Reducir el tamaño del texto */
+    }
+
+    /* Texto del slider más pequeño */
+    .slides img {
+        object-fit: cover;
+    }
+}
